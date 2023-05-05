@@ -1,0 +1,33 @@
+$primary-color : blue;
+$secondary-color : red;
+
+@mixin button($bg-color,$border-color:rgb(240, 224, 5)) {
+    border: 1px solid $border-color;
+    border-radius: 25px;
+    background-color: $bg-color;
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.button-1 {
+    @include button($primary-color)
+}
+
+.button-2 {
+    @include button($secondary-color)
+}
+
+.button-3 {
+    @include button(black,white)
+}
+
+.input {
+    outline-color: purple;
+    height: 40px;
+    width: 200px;
+    border-radius: 15px;
+}
