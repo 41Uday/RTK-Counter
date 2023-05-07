@@ -14,7 +14,8 @@ const Counter = () => {
                 <button className="button-1" onClick={() => dispatch(increment())}>Increase</button>
                 <button className="button-2" onClick={() => dispatch(decrement())}>Decrease</button>
                 <button className="button-3" onClick={() => dispatch(increaseByNumber(Number(inputValue)))}>Increase by {inputValue}</button>
-                <input type='text' className='input' onChange={e => setInputValue(e.target.value)} />
+                <input type='text' className='input' onChange={e => setInputValue(e.target.value)} placeholder='Enter a number that you want to increase' />
+                <button className="button-3" onClick={() => dispatch(increaseByNumber(Number(inputValue)))}>Async </button>
             </center>
         </div>
     )

@@ -5,12 +5,16 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import store from "./store";
+import { ApiProvider } from "@reduxjs/toolkit/query/react";
+import { productsApi } from "./features/Products/apiSlice";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <ApiProvider api={productsApi}>
+        <App />
+      </ApiProvider>
     </Provider>
   </React.StrictMode>
 );
